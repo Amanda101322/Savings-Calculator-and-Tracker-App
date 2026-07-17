@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubbly Student Savings Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="calculator-container">
+        <h1>PiggyBank 🎯</h1>
+        <p class="subtitle">Plan your budget, track your progress, and smash your goals!</p>
+
+        <div class="input-group">
+            <label for="goal-name">What are you saving for?</label>
+            <input type="text" id="goal-name" placeholder="e.g., Cool Sneakers, New Phone, Books...">
+        </div>
+
+        <div class="input-group">
+            <label for="target-amount">Target Amount ($)</label>
+            <input type="number" id="target-amount" placeholder="0.00">
+        </div>
+
+        <div class="input-group">
+            <label for="current-savings">Current Savings ($)</label>
+            <input type="number" id="current-savings" placeholder="0.00">
+        </div>
+
+        <div class="input-group">
+            <label for="weekly-deposit">Weekly Deposit ($)</label>
+            <input type="number" id="weekly-deposit" placeholder="0.00">
+        </div>
+
+        <button id="calculate-btn">Calculate Weeks ✨</button>
+
+        <div id="result" class="hidden"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
