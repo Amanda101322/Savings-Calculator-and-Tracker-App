@@ -2,44 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bubbly Student Savings Calculator</title>
+    <meta name="vieport" content="width=device-width, initial-scale=1.0">
+    <title>PiggyBank Calculator And Tracker </title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div id="calculator-container">
-        <h1>Your Trusted PiggyBank 🎯</h1>
-        <p class="subtitle">Plan your budget, track your progress, and smash your goals!</p>
+    <div class="tracker-container">
+        <div class="top-row">
+            <button id="theme-toggle"> Dark Mode</button>
+            <button id="reset-btn" class="danger-btn"> Reset Account</button>
+        </div>
+    
+        <h1>Piggy Bank Calculator And Tracker</h1>
+        <p class="subtitle"><em>"Save now and save your life from future misery"</em></p>
 
-        <div class="input-group">
-            <label for="goal-name">What are you saving for?</label>
-            <input type="text" id="goal-name" placeholder="e.g., Cool Sneakers, New Phone, Books...">
+        <hr>
+
+        <div class="section">
+            <h3>Set Your Goal</h3>
+            <input type="text" id="goal-name" placeholder="What are you saving for? (e.g, Laptop)">
+
+            <label for="currency-select" class="label-text">Select Currency Layout:</label>
+            <select id="currency-select">
+                <option value="">Naira (N)</option>
+                <option value="$"US Dollar ($)</option>
+                <option value="Pound ()</option>
+                <option value="CA$"<CAD (CA$)</option>
+                <option value="Euro" ()</option></option>
+            </select>
+
+            <input type="number" id="goal-amount" placeholder=""Target Amount">
+            <button id="set-goal-btn">Set Goal</button>
+            </div>
+
+            <div class="section display-section">
+                <h2 id="progress-text">Set a goal to start</h2>
+                <p id="translation-text" class="translation-box"></p>
+                <div class="progress-bar-bg">
+                    <div id="progress-bar-fill"></div>
+                </div>
+            </div>
+
+            <div class="section">
+               <h3> Drop Coins In The Bank</h3>
+               <input type="number" id="deposit-amount" placeholder="Amount to add">
+
+               <label for="deposit-date" classs="label-text">Transaction Date</label>
+               <input type="text" id="deposit-date">
+
+               <label for="deposit-note" class="label-text">Transaction Remark (Optional):</label>
+               <input type="text" id="deposit-note" placeholde="e.g., Cash from uncle, side hustle">
+
+               <button id="deposit-btn">Deposit </button>
+            </div>
+
+            <div class="section history-section">
+                <h3> Progress Monitor (History Log)</h3>
+                <ul id ="history-log"></ul>
+            </div>
         </div>
 
-        <div class="input-group">
-            <label for="target-amount">Target Amount ($)</label>
-            <input type="number" id="target-amount" placeholder="0.00">
-        </div>
-
-        <div class="input-group">
-            <label for="current-savings">Current Savings ($)</label>
-            <input type="number" id="current-savings" placeholder="0.00">
-        </div>
-
-        <div class="input-group">
-            <label for="weekly-deposit">Weekly Deposit ($)</label>
-            <input type="number" id="weekly-deposit" placeholder="0.00">
-        </div>
-
-        <button id="calculate-btn">Calculate Weeks ✨</button>
-
-        <div id="result" class="hidden"></div>
-    </div>
-
-    <script src="script.js"></script>
+        <script src="script.js"></script>
 </body>
 </html>
+
